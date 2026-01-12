@@ -1,0 +1,31 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class findarea
+{
+  int[] binary= new int[1000];
+  int i=0;
+  int n;
+  
+  public void convertToBinary(int num) {
+      n = num;
+      i = 0;
+      while(n>0){
+        binary[i]=n%2;
+        n=n/2;
+        i++;
+      }
+      for(int j=i-1;j>=0;j--){
+        System.out.print(binary[j]);
+      }
+  }
+  
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	  int n=44;
+	  System.out.println("decimal " + n);
+	  findarea fa = new findarea();
+	  fa.convertToBinary(n);
+	}
+}
